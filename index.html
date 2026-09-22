@@ -1,58 +1,71 @@
 <!doctype html>
 <html lang="ru">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
-<meta name="theme-color" content="#151a2c">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Lada English Quest">
-<link rel="manifest" href="/manifest.webmanifest">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#111827"><link rel="manifest" href="./manifest.webmanifest">
 <title>Lada English Quest</title>
 <style>
-:root{--bg:#f5f6fa;--card:#fff;--ink:#172033;--muted:#6d7587;--line:#e3e7ef;--accent:#5b63e8;--accent2:#eef0ff;--ok:#16835b;--bad:#c74646;--nav:#151a2c;--safe:env(safe-area-inset-bottom)}
-*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-tap-highlight-color:transparent}body{padding-bottom:calc(76px + var(--safe))}
-button,input{font:inherit}button{cursor:pointer;border:0}.app{min-height:100vh}.main{max-width:720px;margin:auto;padding:18px 16px 24px}.top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin:4px 0 18px}.top h1{font-size:25px;line-height:1.15;margin:0 0 5px}.muted{color:var(--muted)}.grid{display:grid;gap:12px}.g2{grid-template-columns:repeat(2,1fr)}.g4{grid-template-columns:repeat(2,1fr)}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:17px;box-shadow:0 5px 18px rgba(25,35,70,.06)}.stat{font-size:26px;font-weight:800;margin-top:5px}.tag{font-size:12px;color:var(--muted)}.pill{display:inline-block;padding:5px 9px;border-radius:999px;background:var(--accent2);color:var(--accent);font-size:12px;font-weight:700}.btn{min-height:46px;padding:11px 15px;border-radius:12px;background:var(--accent);color:#fff;font-weight:750}.btn.secondary{background:#eef0f5;color:#293044}.btn.danger{background:#fbeaea;color:#a32e2e}.btn.wide{width:100%}.row{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.progress{height:8px;background:#eceef4;border-radius:99px;overflow:hidden}.bar{height:100%;background:var(--accent);border-radius:99px}.task{padding:15px;border:1px solid var(--line);border-radius:15px;margin-top:12px}.option{display:block;width:100%;text-align:left;min-height:48px;padding:12px 13px;border:1px solid var(--line);background:#fff;border-radius:11px;margin:8px 0}.option:active{background:#f2f3ff}.feedback{padding:12px;border-radius:11px;margin-top:10px}.good{background:#eaf8f1;color:var(--ok)}.bad{background:#fff0f0;color:var(--bad)}.chat{height:50vh;min-height:310px;overflow:auto;background:#fafbfe;border:1px solid var(--line);padding:12px;border-radius:15px}.msg{max-width:88%;padding:11px 13px;border-radius:13px;margin:8px 0;white-space:pre-wrap}.me{margin-left:auto;background:#e9ecff}.bot{background:#fff;border:1px solid var(--line)}.chatbar{display:flex;gap:8px;margin-top:9px}.chatbar input{min-width:0;flex:1;padding:12px;border:1px solid var(--line);border-radius:11px}.word{font-size:40px;font-weight:850;text-align:center;margin:20px}.mic{width:96px;height:96px;border-radius:50%;background:var(--accent);color:#fff;font-size:30px;box-shadow:0 7px 22px rgba(91,99,232,.25)}.bottom{position:fixed;z-index:20;left:0;right:0;bottom:0;background:rgba(21,26,44,.97);padding:7px 8px calc(7px + var(--safe));display:grid;grid-template-columns:repeat(6,1fr);gap:3px}.bottom button{background:transparent;color:#cbd0df;padding:7px 2px;border-radius:9px;font-size:10px}.bottom button.active{background:#292f4a;color:#fff}.bottom span{display:block;font-size:17px;margin-bottom:1px}.install{display:none;background:#fff4d9;border:1px solid #f0d79a;padding:11px;border-radius:12px;margin-bottom:12px}.install button{margin-left:8px;padding:7px 10px;border-radius:8px;background:#151a2c;color:#fff}.tablewrap{overflow:auto}.table{width:100%;border-collapse:collapse;min-width:480px}.table td,.table th{padding:10px;border-bottom:1px solid var(--line);text-align:left}.hidden{display:none!important}@media(min-width:720px){body{padding-bottom:0}.main{padding:30px}.bottom{position:static;max-width:720px;margin:0 auto 20px;border-radius:14px}.g4{grid-template-columns:repeat(4,1fr)}} 
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:#f5f7fb;color:#172033}
+header{background:#111827;color:#fff;padding:18px 16px 14px;position:sticky;top:0;z-index:2}h1{font-size:22px;margin:0 0 4px}.sub{opacity:.75;font-size:13px}
+main{max-width:760px;margin:auto;padding:16px 16px 92px}.card{background:#fff;border-radius:18px;padding:18px;margin:12px 0;box-shadow:0 2px 12px #0000000d}
+h2{font-size:20px;margin:0 0 10px}h3{margin:0 0 8px}.word{font-size:34px;font-weight:750;text-align:center;margin:18px 0}.translation{text-align:center;color:#64748b;margin-bottom:16px}
+button{border:0;border-radius:13px;padding:13px 16px;font-size:16px;font-weight:650;background:#111827;color:#fff;margin:5px;cursor:pointer}button.secondary{background:#e5e7eb;color:#111827}button.success{background:#166534}button.warn{background:#92400e}
+.answers{display:grid;gap:9px}.answers button{width:100%;margin:0;text-align:left;background:#eef2ff;color:#172033}.answers button:hover{background:#e0e7ff}
+.progress{height:9px;background:#e5e7eb;border-radius:99px;overflow:hidden}.bar{height:100%;background:#111827;width:0}
+nav{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #e5e7eb;display:flex;justify-content:center;z-index:3;padding:8px calc(8px + env(safe-area-inset-bottom))}
+nav button{background:transparent;color:#475569;font-size:13px;margin:0;flex:1;max-width:180px}nav button.active{color:#111827;font-weight:800}
+.hidden{display:none}.feedback{min-height:25px;font-weight:650;margin-top:10px}.small{font-size:13px;color:#64748b}.stat{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid #eef2f7}
+textarea{width:100%;min-height:90px;border:1px solid #dbe1ea;border-radius:12px;padding:12px;font:inherit}
 </style>
 </head>
 <body>
-<div id="install" class="install">Можно установить приложение на главный экран.<button onclick="installApp()">Установить</button></div>
-<main class="main"><div id="app"></div></main>
-<nav class="bottom">
-<button data-page="home"><span>⌂</span>Главная</button>
-<button data-page="lesson"><span>★</span>Урок</button>
-<button data-page="practice"><span>✓</span>Практика</button>
-<button data-page="pron"><span>◉</span>Голос</button>
-<button data-page="tutor"><span>AI</span>Репетитор</button>
-<button data-page="parent"><span>☰</span>Родителю</button>
-</nav>
+<header><h1>Lada English Quest</h1><div class="sub">Английский через задания, историю и подсказки</div></header>
+<main>
+<section id="lesson">
+<div class="card"><h2>Сегодняшняя миссия</h2><div class="small">Тема: <b>have / has</b></div><div class="progress"><div class="bar" id="bar"></div></div></div>
+<div class="card" id="task"></div>
+</section>
+<section id="stats" class="hidden">
+<div class="card"><h2>Статистика</h2><div class="stat"><span>Заданий выполнено</span><b id="sDone">0</b></div><div class="stat"><span>Правильных ответов</span><b id="sCorrect">0</b></div><div class="stat"><span>Подсказок</span><b id="sHints">0</b></div><div class="stat"><span>Попыток</span><b id="sAttempts">0</b></div><p class="small">Данные хранятся только в этом браузере на телефоне.</p></div>
+<div class="card"><h3>Рекомендация</h3><p id="recommend">Начни урок.</p></div>
+</section>
+<section id="parent" class="hidden">
+<div class="card"><h2>Для родителя</h2><p>Лада занимается английским по 30 минут два раза в неделю. Здесь можно посмотреть текущую динамику.</p><p class="small">Эта версия работает без сервера и без платного AI API.</p></div>
+<div class="card"><h3>Сбросить статистику</h3><button class="warn" onclick="resetStats()">Сбросить</button></div>
+</section>
+</main>
+<nav><button id="nLesson" class="active" onclick="show('lesson')">Урок</button><button id="nStats" onclick="show('stats')">Статистика</button><button id="nParent" onclick="show('parent')">Родителю</button></nav>
 <script>
-let state=null, lessonData=null, taskIndex=0, hints=0, pronIndex=0, deferredPrompt=null;
-const pronWords=["three","school","book","has","have","football","Minecraft","Harry Potter"];
-const $=s=>document.querySelector(s);
-async function api(url,opt){let r=await fetch(url,opt);if(!r.ok)throw new Error("API "+r.status);return r.json()}
-if("serviceWorker" in navigator){navigator.serviceWorker.register("/sw.js").catch(()=>{});}
-async function init(){try{state=await api("/api/state");lessonData=await api("/api/lesson");show("home")}catch(e){$("#app").innerHTML='<div class="card"><h2>Не удалось загрузить приложение</h2><p class="muted">Проверь подключение к серверу.</p></div>'}}
-window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();deferredPrompt=e;$("#install").style.display="block"});
-async function installApp(){if(!deferredPrompt)return;deferredPrompt.prompt();await deferredPrompt.userChoice;deferredPrompt=null;$("#install").style.display="none"}
-document.querySelectorAll(".bottom button").forEach(b=>b.onclick=()=>show(b.dataset.page));
-function show(page){document.querySelectorAll(".bottom button").forEach(b=>b.classList.toggle("active",b.dataset.page===page));({home,lesson:lessonPage,practice,pron,tutor,parent}[page])()}
-function stat(a,b,c){return `<div class="card"><div class="muted">${a}</div><div class="stat">${b}</div><div class="tag">${c}</div></div>`}
-function home(){const s=state.stats,t=state.topics;$("#app").innerHTML=`<div class="top"><div><h1>Привет, Лада</h1><div class="muted">Твоя английская миссия продолжается.</div></div><span class="pill">4 класс</span></div><div class="grid g4">${stat("Прогресс","72%","учебный")}${stat("Занятий",s.sessions,"завершено")}${stat("Заданий",s.tasks,"выполнено")}${stat("Самостоятельность",s.independent+"%","без подсказок")}</div><div class="card" style="margin-top:12px"><span class="pill">Сегодня</span><h2>Secret Library</h2><p>${lessonData.intro}</p><button class="btn wide" onclick="show('lesson')">Начать урок</button></div><div class="card" style="margin-top:12px"><h2>Темы</h2>${Object.entries(t).map(([k,v])=>`<p><b>${k}</b> <span class="muted">${v.score}%</span></p><div class="progress"><div class="bar" style="width:${v.score}%"></div></div>`).join("")}</div>`}
-function lessonPage(){taskIndex=0;hints=0;renderTask()}
-function renderTask(){const t=lessonData.tasks[taskIndex];$("#app").innerHTML=`<div class="top"><div><h1>${lessonData.title}</h1><div class="muted">Задание ${taskIndex+1} из ${lessonData.tasks.length}</div></div></div><div class="card"><p>${lessonData.story}</p><div class="task"><h2>${t.q}</h2>${t.options.map(o=>`<button class="option" onclick="answer('${o}')">${o}</button>`).join("")}<div id="fb"></div><button class="btn secondary wide" style="margin-top:10px" onclick="hint()">Подсказка</button></div></div>`}
-function answer(o){const t=lessonData.tasks[taskIndex],fb=$("#fb");if(o===t.answer){fb.innerHTML='<div class="feedback good">Верно.</div>';setTimeout(()=>{taskIndex++;hints=0;if(taskIndex>=lessonData.tasks.length)completeLesson();else renderTask()},650)}else{hints++;fb.innerHTML='<div class="feedback bad">Не спеши угадывать. Подумай, кто выполняет действие.</div>'}}
-function hint(){const t=lessonData.tasks[taskIndex];$("#fb").innerHTML=`<div class="feedback">${hints===0?t.hint1:t.hint2}</div>`;hints=Math.min(2,hints+1)}
-async function completeLesson(){await api("/api/progress",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({session:true,taskCompleted:true,topic:"Грамматика",score:90,minutes:30,independent:hints?70:100})});state=await api("/api/state");$("#app").innerHTML='<div class="card"><span class="pill">Миссия выполнена</span><h1>Урок закончен</h1><p>Теперь можно перейти к практике или произношению.</p><div class="grid g2"><button class="btn" onclick="show(\'practice\')">Практика</button><button class="btn secondary" onclick="show(\'pron\')">Голос</button></div></div>'}
-function speak(text){if(!("speechSynthesis"in window))return alert("Озвучивание не поддерживается.");let u=new SpeechSynthesisUtterance(text);u.lang="en-US";u.rate=.82;let vs=speechSynthesis.getVoices();u.voice=vs.find(v=>/^en/i.test(v.lang))||null;speechSynthesis.cancel();speechSynthesis.speak(u)}
-function practice(){let items=[["Чтение","Read: I have a blue football."],["Слова","football → мяч"],["Грамматика","She has a book."],["Чтение","My school is big. I like my school."]];$("#app").innerHTML=`<div class="top"><div><h1>Практика</h1><div class="muted">Короткие задания.</div></div></div><div class="grid">${items.map(x=>`<div class="card"><span class="pill">${x[0]}</span><h3>${x[1]}</h3><button class="btn secondary" onclick="speak('${x[1].replace(/'/g,"\\'")}')">Слушать</button></div>`).join("")}</div>`}
-function pron(){let w=pronWords[pronIndex];$("#app").innerHTML=`<div class="card center"><span class="pill">Произношение</span><div class="word">${w}</div><p class="muted">1. Послушай. 2. Нажми микрофон. 3. Произнеси слово.</p><button class="btn secondary wide" onclick="speak('${w.replace(/'/g,"\\'")}')">Слушать</button><div style="height:12px"></div><button class="mic" onclick="recognize()" aria-label="Говорить">●</button><div id="prfb" style="margin-top:16px"></div><p class="tag">Учебная проверка: распознанный текст сравнивается с целью. Это не фонемный анализ.</p><button class="btn secondary wide" onclick="pronIndex=(pronIndex+1)%pronWords.length;pron()">Следующее слово</button></div>`}
-function recognize(){const SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR){$("#prfb").innerHTML='<div class="feedback bad">Распознавание речи не поддерживается этим браузером. На Android используй актуальный Chrome и дай доступ к микрофону.</div>';return}const r=new SR();r.lang="en-US";r.interimResults=false;r.maxAlternatives=3;$("#prfb").innerHTML='<div class="feedback">Слушаю…</div>';r.onresult=e=>{let target=pronWords[pronIndex].toLowerCase(),best=e.results[0][0].transcript.trim().toLowerCase();for(let i=0;i<e.results[0].length;i++){let x=e.results[0][i].transcript.trim().toLowerCase();if(x===target||x.includes(target)){best=x;break}}let ok=best===target||best.includes(target);$("#prfb").innerHTML=`<div class="feedback ${ok?"good":"bad"}">${ok?"Хорошо.":"Попробуй ещё раз."}<br>Распознано: <b>${best}</b></div>`};r.onerror=e=>{$("#prfb").innerHTML='<div class="feedback bad">Не удалось распознать речь. Проверь разрешение микрофона, интернет и шум вокруг.</div>'};try{r.start()}catch(e){}}
-async function tutor(){$("#app").innerHTML=`<div class="top"><div><h1>AI-репетитор</h1><div class="muted">Можно задавать вопросы по-русски.</div></div></div><div class="card"><div id="chat" class="chat"><div class="msg bot">Привет, Лада. Что разберём?</div></div><div class="chatbar"><input id="q" placeholder="Например: почему has?"><button class="btn" onclick="ask()">➤</button></div><button class="btn secondary wide" style="margin-top:8px" onclick="speak(document.querySelector('#chat .msg:last-child')?.innerText||'')">Озвучить ответ</button></div>`}
-async function ask(){let q=$("#q").value.trim();if(!q)return;addMsg(q,"me");$("#q").value="";addMsg("Думаю…","bot");let r;try{r=await api("/api/tutor",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({messages:[{role:"user",content:q}]})});$("#chat .msg:last-child").remove();addMsg(r.reply,"bot")}catch(e){$("#chat .msg:last-child").textContent="Сервер AI сейчас недоступен. Проверь подключение."}}
-function addMsg(t,c){let d=document.createElement("div");d.className="msg "+c;d.textContent=t;$("#chat").appendChild(d);$("#chat").scrollTop=$("#chat").scrollHeight}
-function parent(){let t=state.topics;$("#app").innerHTML=`<div class="top"><div><h1>Родителю</h1><div class="muted">Статистика занятий.</div></div></div><div class="grid g4">${stat("Занятий",state.stats.sessions,"всего")}${stat("Минут",state.stats.minutes,"учёба")}${stat("Заданий",state.stats.tasks,"всего")}${stat("Самостоятельность",state.stats.independent+"%","средняя")}</div><div class="card" style="margin-top:12px"><h2>Темы</h2><div class="tablewrap"><table class="table"><tr><th>Тема</th><th>%</th><th>Статус</th></tr>${Object.entries(t).map(([k,v])=>`<tr><td>${k}</td><td>${v.score}</td><td>${v.status==="strong"?"сильная":v.status==="progress"?"в работе":"повторить"}</td></tr>`).join("")}</table></div></div><div class="card" style="margin-top:12px"><h2>Последние занятия</h2><div class="tablewrap"><table class="table"><tr><th>Дата</th><th>Тема</th><th>Результат</th><th>Мин.</th></tr>${state.history.map(x=>`<tr><td>${x.date}</td><td>${x.topic}</td><td>${x.score}%</td><td>${x.minutes}</td></tr>`).join("")}</table></div></div>`}
-init();
-</script>
+const tasks=[
+{q:"Выбери правильный вариант: I ___ a book.",a:["have","has"],ok:0,why:"После I используем have."},
+{q:"Выбери правильный вариант: She ___ a dog.",a:["have","has"],ok:1,why:"После he / she / it используем has."},
+{q:"Выбери правильный вариант: We ___ football.",a:["have","has"],ok:0,why:"После we используем have."},
+{q:"Выбери правильный вариант: Harry ___ a wand.",a:["have","has"],ok:1,why:"Harry = he, поэтому has."},
+{q:"Выбери правильный вариант: They ___ Minecraft.",a:["have","has"],ok:0,why:"После they используем have."}
+];
+let i=0,hints=0,attempts=0,done=0,correct=0;
+let st=JSON.parse(localStorage.getItem("ladaStats")||'{"done":0,"correct":0,"hints":0,"attempts":0}');
+function save(){localStorage.setItem("ladaStats",JSON.stringify(st));}
+function render(){
+ const t=tasks[i]; document.getElementById("task").innerHTML=`<h2>${t.q}</h2><div class="answers">${t.a.map((x,n)=>`<button onclick="answer(${n})">${x}</button>`).join("")}</div><div class="feedback" id="fb"></div><div id="tools"></div>`;
+ document.getElementById("bar").style.width=(i/tasks.length*100)+"%";
+}
+function answer(n){
+ st.attempts++; save(); document.getElementById("sAttempts").textContent=st.attempts;
+ const t=tasks[i],fb=document.getElementById("fb"),tools=document.getElementById("tools");
+ if(n===t.ok){st.correct++;st.done++;save();fb.textContent="Верно. "+t.why;fb.style.color="#166534";tools.innerHTML=`<button class="success" onclick="next()">Дальше</button>`;update();}
+ else{fb.textContent="Почти. Не угадывай — используй подсказку.";fb.style.color="#92400e";tools.innerHTML=`<button class="secondary" onclick="hint()">Подсказка</button>`;}
+ update();
+}
+function hint(){st.hints++;save();const t=tasks[i];document.getElementById("fb").textContent=t.why;document.getElementById("tools").innerHTML=`<button class="secondary" onclick="repeat()">Попробовать ещё раз</button>`;update();}
+function repeat(){render()}
+function next(){i++; if(i>=tasks.length){document.getElementById("task").innerHTML='<h2>Миссия выполнена</h2><p>Хорошая работа. Теперь прочитай вслух слова ниже и проверь произношение.</p><div class="word" id="word">three</div><div class="translation">три</div><button onclick="speak()">🔊 Послушать</button><button onclick="listen()">🎙️ Произнести</button><div class="feedback" id="speech"></div><button class="secondary" onclick="restart()">Повторить миссию</button>';document.getElementById("bar").style.width="100%";}else render();}
+function restart(){i=0;render()}
+function speak(){speechSynthesis.speak(new SpeechSynthesisUtterance(document.getElementById("word").textContent));}
+function listen(){if(!('webkitSpeechRecognition' in window||'SpeechRecognition' in window)){document.getElementById("speech").textContent="Распознавание речи не поддерживается этим браузером.";return}const R=window.SpeechRecognition||window.webkitSpeechRecognition,r=new R();r.lang="en-US";r.interimResults=false;r.maxAlternatives=1;r.onresult=e=>{let x=e.results[0][0].transcript.toLowerCase().trim();document.getElementById("speech").textContent=x.includes("three")?"Похоже, получилось: "+x:"Я услышал: "+x+". Повтори медленнее.";};r.onerror=()=>document.getElementById("speech").textContent="Не удалось распознать речь. Попробуй ещё раз.";r.start();}
+function update(){document.getElementById("sDone").textContent=st.done;document.getElementById("sCorrect").textContent=st.correct;document.getElementById("sHints").textContent=st.hints;document.getElementById("sAttempts").textContent=st.attempts;document.getElementById("recommend").textContent=st.hints>2?"Повтори have / has ещё раз, особенно различие he/she/it и I/we/they.":"Продолжай с короткими предложениями и читай их вслух.";}
+function show(id){["lesson","stats","parent"].forEach(x=>document.getElementById(x).classList.toggle("hidden",x!==id));["nLesson","nStats","nParent"].forEach(x=>document.getElementById(x).classList.remove("active"));document.getElementById(id==="lesson"?"nLesson":id==="stats"?"nStats":"nParent").classList.add("active");update();}
+function resetStats(){if(confirm("Сбросить статистику?")){st={done:0,correct:0,hints:0,attempts:0};save();update();}}
+render();update();
+if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js')}<\/script>
 </body></html>
