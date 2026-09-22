@@ -1,0 +1,54 @@
+{
+  "child": {
+    "name": "Лада",
+    "age": 10,
+    "grade": 4,
+    "sessionsPerWeek": 2,
+    "sessionMinutes": 30
+  },
+  "stats": {
+    "sessions": 8,
+    "minutes": 232,
+    "tasks": 126,
+    "independent": 78,
+    "xp": 1240
+  },
+  "topics": {
+    "Словарный запас": {
+      "score": 88,
+      "status": "strong"
+    },
+    "Чтение": {
+      "score": 54,
+      "status": "review"
+    },
+    "Грамматика": {
+      "score": 61,
+      "status": "progress"
+    },
+    "Произношение": {
+      "score": 49,
+      "status": "review"
+    }
+  },
+  "history": [
+    {
+      "date": "2026-09-21",
+      "topic": "have / has",
+      "score": 82,
+      "minutes": 28
+    },
+    {
+      "date": "2026-09-18",
+      "topic": "Reading: My School",
+      "score": 68,
+      "minutes": 31
+    },
+    {
+      "date": "2026-09-15",
+      "topic": "Vocabulary: Football",
+      "score": 91,
+      "minutes": 27
+    }
+  ]
+}

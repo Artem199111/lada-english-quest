@@ -1,0 +1,10 @@
+{
+  "name": "Lada English Quest",
+  "short_name": "Lada English",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f6fa",
+  "theme_color": "#151a2c",
+  "lang": "ru",
+  "description": "Персональный AI-репетитор английского для Лады"
+}
